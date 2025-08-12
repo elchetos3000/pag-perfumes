@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Perfumes | Elegance Scents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f3f0;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #e1d7d1;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8b5a2b;
+        }
+        
+        .back-btn {
+            background-color: #8b5a2b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .back-btn:hover {
+            background-color: #6d4722;
+            transform: translateY(-2px);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #5a3921;
+            font-size: 36px;
+        }
+        
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .perfume-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .perfume-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .perfume-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .perfume-info {
+            padding: 20px;
+        }
+        
+        .perfume-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #5a3921;
+        }
+        
+        .perfume-brand {
+            color: #8b5a2b;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .perfume-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .perfume-price {
+            font-weight: bold;
+            font-size: 18px;
+            color: #5a3921;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #8b5a2b;
+            border-top: 1px solid #e1d7d1;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Elegance Scents</div>
+            <a href="index.html" class="back-btn">Regresar al Inicio</a>
+        </header>
+        
+        <h1>Nuestro Catálogo de Perfumes</h1>
+        
+        <div class="catalog-grid">
+            <!-- Perfume 1 -->
+            <div class="perfume-card">
+                <img src="https://via.placeholder.com/300x250?text=Perfume+1" alt="Perfume Ébano" class="perfume-img">
+                <div class="perfume-info">
+                    <div class="perfume-name">Ébano Nocturno</div>
+                    <div class="perfume-brand">by Luxe Parfums</div>
+                    <p class="perfume-desc">Una mezcla sensual de vainilla, ámbar y notas florales que evocan la magia de la noche.</p>
+                    <div class="perfume-price">$89.99</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 2 -->
+            <div class="perfume-card">
+                <img src="https://via.placeholder.com/300x250?text=Perfume+2" alt="Perfume Aurora" class="perfume-img">
+                <div class="perfume-info">
+                    <div class="perfume-name">Aurora Boreal</div>
+                    <div class="perfume-brand">by Nordic Scents</div>
+                    <p class="perfume-desc">Frescas notas cítricas combinadas con ligeros toques de menta y jazmín.</p>
+                    <div class="perfume-price">$75.50</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 3 -->
+            <div class="perfume-card">
+                <img src="https://via.placeholder.com/300x250?text=Perfume+3" alt="Perfume Seducción" class="perfume-img">
+                <div class="perfume-info">
+                    <div class="perfume-name">Seducción Carmesí</div>
+                    <div class="perfume-brand">by Bella Fragance</div>
+                    <p class="perfume-desc">Una explosión de frutos rojos con fondo amaderado para un aroma irresistible.</p>
+                    <div class="perfume-price">$95.00</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 4 -->
+            <div class="perfume-card">
+                <img src="https://via.placeholder.com/300x250?text=Perfume+4" alt="Perfume Océano" class="perfume-img">
+                <div class="perfume-info">
+                    <div class="perfume-name">Brisa de Océano</div>
+                    <div class="perfume-brand">by Aqua Scents</div>
+                    <p class="perfume-desc">Notas acuáticas y salinas que te transportan a la orilla del mar al atardecer.</p>
+                    <div class="perfume-price">$68.99</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 5 -->
+            <div class="perfume-card">
+                <img src="https://via.placeholder.com/300x250?text=Perfume+5" alt="Perfume Oro" class="perfume-img">
+                <div class="perfume-info">
+                    <div class="perfume-name">Oro Blanco</div>
+                    <div class="perfume-brand">by Royal Essence</div>
+                    <p class="perfume-desc">Lujoso aroma con notas de sándalo, azahar y un toque de canela.</p>
+                    <div class="perfume-price">$120.00</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 6 -->
+            <div class="perfume-card">
+                <img src="https://via.placeholder.com/300x250?text=Perfume+6" alt="Perfume Jazmín" class="perfume-img">
+                <div class="perfume-info">
+                    <div class="perfume-name">Campo de Jazmín</div>
+                    <div class="perfume-brand">by Floral Dreams</div>
+                    <p class="perfume-desc">La esencia pura del jazmín combinada con ligeras notas de té verde.</p>
+                    <div class="perfume-price">$79.99</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Elegance Scents. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

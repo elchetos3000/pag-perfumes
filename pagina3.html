@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes de Verano | Breeze Fragrances</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #e6f7ff, #ffffff);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0077b6;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo::before {
+            content: "☀️";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .back-btn {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
+        }
+        
+        .back-btn:hover {
+            background-color: #00b4d8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 180, 216, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0077b6;
+            font-size: 38px;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #0077b6, #00b4d8);
+            border-radius: 3px;
+        }
+        
+        .summer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+        
+        .summer-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 119, 182, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .summer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 180, 216, 0.15);
+        }
+        
+        .summer-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #ff9e00;
+            color: white;
+            padding: 5px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 20px;
+            z-index: 2;
+        }
+        
+        .perfume-img {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid #e0f7ff;
+        }
+        
+        .summer-info {
+            padding: 20px;
+            position: relative;
+        }
+        
+        .summer-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #0077b6;
+        }
+        
+        .summer-notes {
+            color: #00b4d8;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .summer-notes::before {
+            content: "🌴";
+            margin-right: 5px;
+        }
+        
+        .summer-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .summer-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .summer-price {
+            font-weight: 700;
+            font-size: 20px;
+            color: #0077b6;
+        }
+        
+        .cart-btn {
+            background-color: #00b4d8;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .cart-btn:hover {
+            background-color: #0077b6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #0077b6;
+            margin-top: 50px;
+            font-size: 14px;
+            border-top: 1px solid #e0f7ff;
+        }
+        
+        .summer-features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            padding: 30px 0;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 119, 182, 0.1);
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 0 20px;
+            max-width: 250px;
+        }
+        
+        .feature-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #00b4d8;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+        
+        .feature-desc {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Breeze Fragrances</div>
+            <a href="index.html" class="back-btn">← Volver al Inicio</a>
+        </header>
+        
+        <h1>Perfumes de Verano</h1>
+        
+        <div class="summer-features">
+            <div class="feature">
+                <div class="feature-icon">🌞</div>
+                <div class="feature-title">Fragancias Frescas</div>
+                <div class="feature-desc">Notas cítricas y acuáticas perfectas para el calor</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⏳</div>
+                <div class="feature-title">Duración Prolongada</div>
+                <div class="feature-desc">Resistencia incluso en los días más calurosos</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌊</div>
+                <div class="feature-title">Inspiración Veraniega</div>
+                <div class="feature-desc">Aromas que evocan playas y atardeceres</div>
+            </div>
+        </div>
+        
+        <div class="summer-grid">
+            <!-- Perfume 1 -->
+            <div class="summer-card">
+                <div class="summer-tag">Más Vendido</div>
+                <img src="https://via.placeholder.com/350x400/00b4d8/ffffff?text=Brisa+Marina" alt="Brisa Marina" class="perfume-img">
+                <div class="summer-info">
+                    <div class="summer-name">Brisa Marina</div>
+                    <div class="summer-notes">Notas de coco, sal marina y bergamota</div>
+                    <p class="summer-desc">Una explosión refrescante que te transporta directamente a la orilla del mar con sus notas acuáticas y un toque tropical.</p>
+                    <div class="summer-footer">
+                        <div class="summer-price">$85.00</div>
+                        <button class="cart-btn">Añadir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 2 -->
+            <div class="summer-card">
+                <div class="summer-tag">Nuevo</div>
+                <img src="https://via.placeholder.com/350x400/ff9e00/ffffff?text=Limonada+Solar" alt="Limonada Solar" class="perfume-img">
+                <div class="summer-info">
+                    <div class="summer-name">Limonada Solar</div>
+                    <div class="summer-notes">Notas de limón, menta y jengibre</div>
+                    <p class="summer-desc">Tan refrescante como un vaso de limonada helada en un día de verano, con un toque picante que sorprende.</p>
+                    <div class="summer-footer">
+                        <div class="summer-price">$78.00</div>
+                        <button class="cart-btn">Añadir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 3 -->
+            <div class="summer-card">
+                <img src="https://via.placeholder.com/350x400/0096c7/ffffff?text=Atardecer+en+Ibiza" alt="Atardecer en Ibiza" class="perfume-img">
+                <div class="summer-info">
+                    <div class="summer-name">Atardecer en Ibiza</div>
+                    <div class="summer-notes">Notas de naranja, ámbar y sándalo</div>
+                    <p class="summer-desc">Captura la magia de los atardeceres mediterráneos con esta fragancia cálida pero fresca, perfecta para las noches de verano.</p>
+                    <div class="summer-footer">
+                        <div class="summer-price">$92.00</div>
+                        <button class="cart-btn">Añadir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 4 -->
+            <div class="summer-card">
+                <img src="https://via.placeholder.com/350x400/48cae4/ffffff?text=Oasis+Fresco" alt="Oasis Fresco" class="perfume-img">
+                <div class="summer-info">
+                    <div class="summer-name">Oasis Fresco</div>
+                    <div class="summer-notes">Notas de pepino, melón y aloe vera</div>
+                    <p class="summer-desc">Tan refrescante como un oasis en el desierto, esta fragancia hidratante es ideal para los días más calurosos.</p>
+                    <div class="summer-footer">
+                        <div class="summer-price">$75.00</div>
+                        <button class="cart-btn">Añadir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 5 -->
+            <div class="summer-card">
+                <div class="summer-tag">Edición Limitada</div>
+                <img src="https://via.placeholder.com/350x400/0096c7/ffffff?text=Palmeras+del+Caribe" alt="Palmeras del Caribe" class="perfume-img">
+                <div class="summer-info">
+                    <div class="summer-name">Palmeras del Caribe</div>
+                    <div class="summer-notes">Notas de piña, flor de hibisco y vainilla</div>
+                    <p class="summer-desc">Una fragancia tropical que evoca vacaciones en playas paradisíacas con aguas turquesas y brisas cálidas.</p>
+                    <div class="summer-footer">
+                        <div class="summer-price">$88.00</div>
+                        <button class="cart-btn">Añadir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 6 -->
+            <div class="summer-card">
+                <img src="https://via.placeholder.com/350x400/00b4d8/ffffff?text=Brisa+de+Algodón" alt="Brisa de Algodón" class="perfume-img">
+                <div class="summer-info">
+                    <div class="summer-name">Brisa de Algodón</div>
+                    <div class="summer-notes">Notas de lino fresco, jazmín y musk</div>
+                    <p class="summer-desc">Limpio, fresco y ligero como una camisa de lino blanco moviéndose con la brisa del verano.</p>
+                    <div class="summer-footer">
+                        <div class="summer-price">$80.00</div>
+                        <button class="cart-btn">Añadir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 Breeze Fragrances - Todos los perfumes de verano</p>
+        <p>Diseñado para resistir el calor y mantenerte fresco todo el día</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes de Diseñador | Luxury Scents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f5f2;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e0d6d0;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: 1px;
+        }
+        
+        .back-btn {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .back-btn:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 60px;
+            color: #000;
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .designer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 70px;
+        }
+        
+        .designer-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .designer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #000;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 3px;
+            z-index: 2;
+        }
+        
+        .perfume-img {
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .designer-info {
+            padding: 25px;
+            position: relative;
+        }
+        
+        .designer-name {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #000;
+        }
+        
+        .designer-house {
+            color: #888;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .perfume-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .perfume-price {
+            font-weight: 700;
+            font-size: 20px;
+            color: #000;
+        }
+        
+        .buy-btn {
+            background-color: transparent;
+            color: #000;
+            border: 1px solid #000;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .buy-btn:hover {
+            background-color: #000;
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            color: #888;
+            border-top: 1px solid #e0d6d0;
+            margin-top: 50px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        
+        .brand-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .brand-logo {
+            height: 30px;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+        
+        .brand-logo:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">LUXURY SCENTS</div>
+            <a href="index.html" class="back-btn">← Volver al Inicio</a>
+        </header>
+        
+        <h1>PERFUMES DE DISEÑADOR</h1>
+        
+        <div class="designer-grid">
+            <!-- Perfume 1 -->
+            <div class="designer-card">
+                <div class="badge">Nuevo</div>
+                <img src="https://via.placeholder.com/400x450?text=Chanel+No.5" alt="Chanel No.5" class="perfume-img">
+                <div class="designer-info">
+                    <div class="designer-name">No.5</div>
+                    <div class="designer-house">Chanel</div>
+                    <p class="perfume-desc">El icónico perfume floral-aldhéydeo creado por Ernest Beaux en 1921. Notas de neroli, ylang-ylang y vainilla.</p>
+                    <div class="price-container">
+                        <div class="perfume-price">$150.00</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 2 -->
+            <div class="designer-card">
+                <div class="badge">Best Seller</div>
+                <img src="https://via.placeholder.com/400x450?text=Sauvage+Dior" alt="Sauvage Dior" class="perfume-img">
+                <div class="designer-info">
+                    <div class="designer-name">Sauvage</div>
+                    <div class="designer-house">Dior</div>
+                    <p class="perfume-desc">Una fresca fragancia amaderada con notas de pimienta de Calabria, bergamota y ambroxan.</p>
+                    <div class="price-container">
+                        <div class="perfume-price">$135.00</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 3 -->
+            <div class="designer-card">
+                <img src="https://via.placeholder.com/400x450?text=Black+Opium" alt="Black Opium" class="perfume-img">
+                <div class="designer-info">
+                    <div class="designer-name">Black Opium</div>
+                    <div class="designer-house">Yves Saint Laurent</div>
+                    <p class="perfume-desc">Una adictiva fragancia oriental con café, vainilla blanca y flores de naranjo.</p>
+                    <div class="price-container">
+                        <div class="perfume-price">$125.00</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 4 -->
+            <div class="designer-card">
+                <img src="https://via.placeholder.com/400x450?text=Acqua+di+Gio" alt="Acqua di Gio" class="perfume-img">
+                <div class="designer-info">
+                    <div class="designer-name">Acqua di Giò</div>
+                    <div class="designer-house">Giorgio Armani</div>
+                    <p class="perfume-desc">Fragancia acuática inspirada en la isla de Pantelleria, con notas cítricas y marinas.</p>
+                    <div class="price-container">
+                        <div class="perfume-price">$110.00</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 5 -->
+            <div class="designer-card">
+                <div class="badge">Edición Limitada</div>
+                <img src="https://via.placeholder.com/400x450?text=Libre" alt="Libre" class="perfume-img">
+                <div class="designer-info">
+                    <div class="designer-name">Libre</div>
+                    <div class="designer-house">Yves Saint Laurent</div>
+                    <p class="perfume-desc">Una fragancia floral amaderada que celebra la libertad, con lavanda francesa y vainilla de Madagascar.</p>
+                    <div class="price-container">
+                        <div class="perfume-price">$145.00</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Perfume 6 -->
+            <div class="designer-card">
+                <img src="https://via.placeholder.com/400x450?text=Light+Blue" alt="Light Blue" class="perfume-img">
+                <div class="designer-info">
+                    <div class="designer-name">Light Blue</div>
+                    <div class="designer-house">Dolce & Gabbana</div>
+                    <p class="perfume-desc">Fragancia fresca y mediterránea con notas de manzana, cedro y bambú.</p>
+                    <div class="price-container">
+                        <div class="perfume-price">$95.00</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="brand-logos">
+            <img src="https://via.placeholder.com/100x30?text=CHANEL" alt="Chanel" class="brand-logo">
+            <img src="https://via.placeholder.com/100x30?text=DIOR" alt="Dior" class="brand-logo">
+            <img src="https://via.placeholder.com/100x30?text=YSL" alt="YSL" class="brand-logo">
+            <img src="https://via.placeholder.com/100x30?text=ARMANI" alt="Armani" class="brand-logo">
+            <img src="https://via.placeholder.com/100x30?text=D&G" alt="Dolce & Gabbana" class="brand-logo">
+            <img src="https://via.placeholder.com/100x30?text=GUCCI" alt="Gucci" class="brand-logo">
+        </div>
+    </div>
+    
+    <footer>
+        <p>LUXURY SCENTS © 2023 - TODOS LOS DERECHOS RESERVADOS</p>
+        <p>Catálogo oficial de perfumes de diseñador</p>
+    </footer>
+</body>
+</html>
